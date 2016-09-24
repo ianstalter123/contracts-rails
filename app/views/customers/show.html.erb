@@ -1,0 +1,19 @@
+<h1><%=@customer.name %>'s Contracts</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Due Date</th>
+  </tr>
+
+  <% @contracts.each do |contract| %>
+    <tr>
+      <td><%= contract.car_model %></td>
+      <td><%= contract.driver_name %></td>
+      <td><%= contract.due_date %></td>
+      <td><%= link_to 'Show', customer_contract_path(@customer, contract) %></td>
+      <td><%= link_to 'Edit', edit_customer_contract_path(@customer, contract) %></td>
+    </tr>
+  <% end %>
+</table>

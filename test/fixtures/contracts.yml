@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_model: MyString
+  driver_name: MyString
+  dute_date: 2016-09-23
+
+two:
+  car_model: MyString
+  driver_name: MyString
+  dute_date: 2016-09-23

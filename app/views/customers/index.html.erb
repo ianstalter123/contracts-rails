@@ -1,0 +1,16 @@
+<h1>Customers#index</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+  </tr>
+
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= link_to 'Show', customer_path(customer) %></td>
+      <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= paginate @customers %>
