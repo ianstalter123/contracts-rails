@@ -6,6 +6,11 @@
     <li class="nav-item active">
       <%= link_to 'New Customer', new_customer_path %>
     </li>
+    <%if @customer && @new_customer != true %>
+    <li class="nav-item active">
+      <%= link_to 'New Contract', new_customer_contract_path(@customer) %>
+    </li>
+    <% end %>
   </ul>
 </nav>
 

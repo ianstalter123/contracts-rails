@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
-  get 'customers/edit'
 
-  get 'customers/show'
-
-  get 'customers/new'
-
-  get 'customers/index'
-
+	# resources :contracts
 
   resources :customers do
   	resources :contracts

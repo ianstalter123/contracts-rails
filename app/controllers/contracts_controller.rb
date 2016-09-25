@@ -1,10 +1,12 @@
 class ContractsController < ApplicationController
 
 	def index
-		@contracts = Contract.page(params[:page]).per(10)
+		@customer = Customer.find(params[:customer_id])
+		@contracts = @customer.contracts.page(params[:page]).per(10)
 	end
 
 	def new
+		@customer = Customer.find(params[:customer_id])
 		@contract = Contract.new
 	end
 
@@ -31,7 +33,9 @@ class ContractsController < ApplicationController
 	end
 
 	def create
-		@contract = Contract.new(contract_params)
+		@customer = Customer.find(params[:customer_id])
+		@contract = @customer.contracts.create(contract_params)
+
 		if @contract.save
 			flash[:success] = "Contract successfully created"
 			redirect_to '/'

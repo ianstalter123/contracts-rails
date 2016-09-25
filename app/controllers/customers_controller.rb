@@ -14,6 +14,7 @@ class CustomersController < ApplicationController
 	end
 
 	def new
+		@new_customer  = true
 		@customer = Customer.new
 	end
 
