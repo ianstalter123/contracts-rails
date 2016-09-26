@@ -1,9 +1,10 @@
 <div class="panel panel-default">
 	<div class="panel-body">
-		<%= simple_form_for [@customer,@contract], html: { class: 'form' },
+		<%= simple_form_for [@contract], html: { class: 'form' },
 		wrapper: :horizontal_form do |f| %>
 		<%= f.input :car_model, error: 'Car model is mandatory, please specify one' %>
 		<%= f.input :driver_name %>
+		<%= f.association :customer  %>
 		<%= f.input :due_date %>
 		<%= f.button :submit %>
 		<% end %>
