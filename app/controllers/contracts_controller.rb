@@ -26,12 +26,13 @@ class ContractsController < ApplicationController
 
 	def update
 		@contract = Contract.find(params[:id])
-		@customer = Customer.find(params[:customer_id])
+		@customer = Customer.find(@contract.customer_id)
+		#@customer = Customer.find(params[:customer_id])
 
 
 		if @contract.update(contract_params)
 			flash[:success] = "Contract successfully updated"
-			redirect_to @customer
+			redirect_to @contract
 		else
 			render 'edit'
 		end
