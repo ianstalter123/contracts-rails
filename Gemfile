@@ -5,6 +5,10 @@ gem 'bootstrap-sass'
 
 gem 'rails-pry'
 
+gem 'rspec-rails'
+
+gem 'rails-controller-testing'
+
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 
 

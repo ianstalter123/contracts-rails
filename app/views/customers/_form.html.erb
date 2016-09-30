@@ -3,6 +3,7 @@
 <%= simple_form_for @customer, html: { class: 'form' },
   wrapper: :horizontal_form do |f| %>
   <%= f.input :name, error: 'Name is mandatory, please specify one' %>
+  <%= f.input :address, error: 'Address is mandatory, please specify one' %>
   <%= f.button :submit %>
 <% end %>
 	</div>

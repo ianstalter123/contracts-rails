@@ -1,13 +1,10 @@
 class ContractsController < ApplicationController
 
 	def index
-		#@customer = Customer.find(params[:customer_id])
-		#@contracts = @customer.contracts.page(params[:page]).per(10)
 		@contracts = Contract.page(params[:page]).per(10)
 	end
 
 	def new
-		#@customer = Customer.find(params[:customer_id])
 		@contract = Contract.new
 	end
 

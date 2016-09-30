@@ -4,6 +4,8 @@
     <th>Title</th>
     <th>Driver Name</th>
     <th>Due Date</th>
+    <th>Customer Name</th>
+    <th>Customer Address</th>
   </tr>
 
   <% @contracts.each do |contract| %>
@@ -11,6 +13,8 @@
       <td><%= contract.car_model %></td>
       <td><%= contract.driver_name %></td>
       <td><%= contract.due_date %></td>
+      <td><%= contract.customer.name %></td>
+      <td><%= contract.customer.address %></td>
       <td><%= link_to 'Show', contract_path(contract) %></td>
       <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
     </tr>
